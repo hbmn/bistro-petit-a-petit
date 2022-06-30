@@ -1,0 +1,321 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  color: #333333; /* RGB */
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "serif";
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+a:hover {
+  opacity: 0.5;
+}
+/*共通パーツ---*/
+body {
+  background-blend-mode: multiply;
+  background-color: #fffef4;
+  background-image: url("bg/bg.webp");
+  background-size: 100% 100%;
+}
+/*sp header---*/
+.header {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+}
+.header__inner {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8vw;
+}
+.header-logo {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+.header-logo img {
+  width: 28px;
+  height: 18px;
+}
+.header-logo h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+/*sp header---*/
+/*ハンバーガー btn gnav ---*/
+@media(max-width:992px) {
+  .header__inner {
+    padding: 0;
+  }
+  .header.color {
+    background-color: #f3f0e580; /*スクロールしたらbg color*/
+  }
+    
+  .header-logo {
+    padding-left:8vw;
+    z-index: 9999;
+  }
+  .gnav {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000cc;
+    z-index: 999;
+  }
+  .gnav ul {
+    padding: 100px 8vw 0;
+  }
+  .gnav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+   align-items: center;
+    width: min(80%, 300px);
+    margin-bottom: 40px;
+  }
+  .gnav-english {
+    font-size: 1.6rem;
+  }
+  .gnav-ja {
+    font-size: 1.0rem;
+    padding-left: 20px;
+  }
+  .open-btn-area {
+    width: 50px;
+    height: 50px;
+    background-color: #c32526;
+    z-index: 9999;
+  }
+  .open-btn {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 18px;
+    right: 12.5px;
+    border-radius: 1px;
+  }
+  .second {
+    top: 24px;
+  }
+  .therd {
+    top: 30px;
+  }
+  /*jQuery toggleClassの記述---*/
+  .gnav.active {
+    display: block;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+  }
+  .header-logo.active {
+    color: #fff;
+  }
+  .first.active {
+    transform: rotate(45deg);
+    top: 23px;
+    transition: 0.3s;
+  }
+  .second.active {
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .therd.active {
+    transform: rotate(-45deg);
+    top: 23px;
+    transition: 0.3s;
+  }
+}
+/*ハンバーガーメニュー gnav animation---*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*ハンバーガー btn gnav ---*/
+/*pc header---*/
+@media(min-width:992px) {
+  .header.color {
+    background-color: #f3f0e580; /*スクロールしたらbg color*/
+  }
+  .open-btn-area {
+    display: none;
+  }
+  .gnav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    gap: 50px;
+  }
+  .gnav ul li a {
+    text-decoration: none;
+    color: #333;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .gnav-english {
+    font-size: 1.6rem;
+  }
+  .gnav-ja {
+    font-size: 1.0rem;
+  }
+  .gnav-english:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    color: #c32526;
+  }
+}
+/*pc header---*/
+/*各ページ、セクションタイトル---*/
+.top_margin {
+  margin-top: 150px;
+}
+.title {
+  font-size: clamp(2.4rem, 8.5vw, 4.0rem); /* 32 / 375 * 100 =8.5vw */
+  font-weight: 500;
+  line-height:1;
+  color: #5a1609;
+  letter-spacing: 0.3rem;
+  text-align:left;
+  margin-bottom: 60px;
+  padding-left: 8vw; /* 30 / 375 * 100 = 8vw */
+}
+.title span {
+  font-size: clamp(1.2rem, 3.7vw, 1.6rem); /* 14 / 375 * 100 =3.7vw */
+}
+@media(min-width:992px) {
+  .top_margin {
+    margin-top: 120px;
+  }
+  .title {
+    padding-left: 13.88vw; /* 200 / 1440 * 100 = 13.8vw */ 
+    width: min(100%,1800px);
+    box-sizing: border-box;
+    margin: 0 auto 60px;
+  }
+  .none {
+    display: none;
+  }
+}
+/*btn---*/
+.btn {
+  display: block;
+  width: min(100%, 280px);
+  padding: 10px 0;
+  border: solid 1px #c32526;
+  text-align: center;
+  text-decoration: none;
+  color: #c32526;
+  letter-spacing: 0.2rem;
+  margin: 0 auto;
+  position: relative;
+}
+.btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: 30px;
+  border-color: transparent transparent transparent #c32526;
+  border-style: solid;
+  border-width: 6px;
+}
+.btn:hover {
+  background-color: #c32526;
+  color: #fff;
+  opacity: 1;
+  transition: 0.5s;
+}
+.btn:hover:after {
+  border-color: transparent transparent transparent #fff;
+  transition: 0.5s;
+}
+/*btn---*/
+/*footer---*/
+.footer {
+  background-color: #c32526;
+  padding: 40px 30px 10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.footer__inner {
+  text-align: left;
+}
+.shopinfo-name {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 30px;
+}
+.shopinfo-name span {
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+.shopinfo-address {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+.shopinfo-address span{
+    color:#fff;
+}
+
+.sns img {
+  width: 30px;
+  margin-right: 20px;
+}
+.sns {
+  margin-bottom: 40px;
+}
+.footer__inner small {
+  font-size: 1.2rem;
+}
+.scroll-top {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: #5a1609;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+}
+.scroll-top:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  transform: rotate(-45deg);
+  top: 21px;
+  right: 19px;
+}
+@media(min-width:992px) {
+  .footer__inner {
+    text-align: center;
+  }
+  .scroll-top {
+    display: none;
+  }
+}

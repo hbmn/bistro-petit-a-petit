@@ -1,0 +1,294 @@
+@charset "UTF-8";
+/* CSS Document */
+/*lunch dinner menu---*/
+.section-lunch {
+  margin-bottom: 120px;
+}
+.section-dinner {
+  margin-bottom: 60px;
+}
+.image-area{
+  display: flex;
+  width:100%;
+}
+
+.image-area__lunch-img {
+  object-fit: cover;
+  width: 50%;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.image-area__dinner-img {
+  object-fit: cover;
+  width: 50%;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.menu-announce{
+  font-size: 1.3rem;
+  padding: 0 8vw;
+  display: block;
+  text-align: left;
+  margin-bottom:100px;
+}
+.section-lunch__wrapper, .section-dinner__wrapper {
+  padding: 0 8vw;
+}
+.section-lunch__title h3, .section-dinner__title h3 {
+  font-size: clamp(2.2rem, 6.93vw, 3.2rem); /* 26 / 375 * 100 = 7.4vw */
+  letter-spacing: 0.3rem;
+  color: #484848;
+}
+.section-lunch__title h3:first-letter {
+  color: #c32526;
+}
+.section-dinner__title h3:first-letter {
+  color: #2925c3;
+}
+
+.section-lunch__title,.section-dinner__title {
+  margin-bottom: 50px;
+}
+
+.section-lunch__menu, .section-dinner__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  font-size:1.4rem;
+}
+.section-lunch__menu span, .section-dinner__menu span {
+  display: block;
+  margin-bottom: 5px;
+}
+.section-lunch__menu h4, .section-dinner__menu h4 {
+  font-size: clamp(1.6rem, 5.3vw, 2.0rem); /* 20 / 375 * 100 = 5.3vw */
+  color: #5a1609;
+  font-weight: 500;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #5a1609;
+  width: min(100%, 220px);
+  margin: 0 auto 5px;
+}
+@media(min-width:992px) {
+  .image-area__lunch-img, .image-area__dinner-img{
+    height:400px;
+  }
+    
+  .section-lunch {
+    margin-bottom: 150px;
+  }
+  .section-dinner{
+    margin-bottom:100px;
+    }
+  .menu-announce {
+    margin-left: 50vw;
+    padding: 0 2vw;
+  }
+  .section-lunch__title h3, .section-dinner__title h3 {
+    letter-spacing: 0.6rem;
+  }
+
+  .section-lunch__menu, .section-dinner__menu {
+    flex-direction: row;
+    justify-content: space-between;
+    width: min(100%, 1040px);
+    margin: 0 auto ;
+  }
+  .lunch__menu-item, .dinner__menu-item {
+    width: calc(100% / 4);
+  }
+}
+/*lunch dinner menu---*/
+.btn-container {
+  padding: 0 8vw;
+}
+/*drink menu---*/
+.section-drink {
+  margin: 150px 0 80px 0;
+  padding: 0 8vw;
+}
+.section-drink__title h3 {
+  font-size: clamp(2.2rem, 6.93vw, 3.2rem); /* 26 / 375 * 100 = 7.4vw */
+  color: #5a1609;
+  letter-spacing: 0.3rem;
+  margin-bottom: 10px;
+    
+}
+.section-drink__title p {
+  font-size: clamp(1.6rem, 6.4vw, 2.4rem); /* 24 / 375 * 100 = 6.4vw */
+  margin-bottom: 50px;
+  letter-spacing: 0.3rem;
+}
+.section-drink__title p span {
+  font-size: 1.4rem;
+}
+.section-drink__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+.drink__menu-item{
+  width: min(100%, 220px);
+  font-size:1.4rem;
+}
+
+.drink__menu-item h4 {
+  font-size: clamp(1.6rem, 5.3vw, 2.0rem); /* 20 / 375 * 100 = 5.3vw */
+  font-weight: 500;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #333;
+  margin: 0 auto 5px;
+}
+.drink__menu-item span {
+  display: block;
+}
+.section-drink__wine {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center; 
+}
+.wine-container{
+  position:relative;
+}
+
+.wine-image  {
+  width: min(100%, 500px); 
+}
+.wine-btl{
+  position: absolute;
+  bottom:-30px;
+  right:-20px;
+  width:min(50%,150px);
+}
+
+.section-drink__wine p {
+  font-size: clamp(2.0rem, 5.8vw, 2.8rem); /* 22 / 375 * 100 = 5.8vw*/
+  color: #5a1609;
+  font-family: 'Noto Serif JP', serif;
+  text-shadow: 0.5px 0.5px 4px #b1b1b1;
+  -webkit-text-shadow: 0.5px 0.5px 4px #bcbcbc;
+  letter-spacing: 0.3rem;
+  margin-bottom: 60px;
+  line-height: clamp(4.0rem, 11.2vw, 4.8rem); /* 42 / 375 * 100 = 11.2vw */
+}
+@media(min-width:992px) {
+  .section-drink {
+    margin-top: 200px;
+  }
+  .section-drink__title h3 {
+    letter-spacing: 0.6rem;
+  }
+  .section-drink__menu {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: min(100%, 1040px);
+    margin: 0 auto 120px;
+  }
+    
+  .drink__menu-item{
+    width:calc(100%/4);
+  }
+    
+  .section-drink__wine {
+    flex-direction: row;
+    justify-content: space-between;
+    width: min(100%, 1040px);
+    margin: 0 auto 150px;
+    text-align: left;
+  }
+  .wine-container{
+    width:50%;
+  }
+    
+  .wine-btl{
+    bottom:-20px;
+    right:-10px;
+    width:min(50%,170px);
+  }
+    
+  }
+/*drink menu---*/
+/*section service---*/
+.section-service {
+  background-image: url("bg/menu_bg.png");
+  background-size: cover;
+  background-position: 90% 90%;
+  padding: 60px 8vw 80px;
+}
+.section-service h3 {
+  font-size: clamp(1.6rem, 6.4vw, 2.8rem); /* 24 / 375 * 100 = 6.4vw */
+  color: #5a1609;
+  letter-spacing: 0.2rem;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+.section-service h4 {
+  font-size: clamp(1.6rem, 5.3vw, 2.4rem); /* 20 / 375 * 100 = 5.3vw */
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.section-service__celebration {
+  margin-bottom: 60px;
+}
+.celebration__wrapper img {
+  width: min(100%, 400px);
+}
+.celebration__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.celebration__plate {
+  margin-bottom: 60px;
+}
+.celebration__wrapper p, .section-service__ticket p {
+  margin-bottom: 20px;
+}
+.section-service__ticket {
+  margin-top: 150px;
+}
+.ticket__text__items p {
+  font-size: clamp(2.0rem, 5.8vw, 2.6rem); /* 22 / 375 * 100 = 5.8vw*/
+  color: #c32526;
+  display: flex;
+  justify-content: space-between;
+  width: min(100%, 375px);
+  margin: 0 auto 10px;
+}
+.ticket__text__items {
+  margin: 30px 0;
+}
+.celebration__plate, .celebration__flower, .ticket__text {
+  text-align: left;
+}
+.service-announce {
+  font-size: 1.3rem;
+}
+@media(min-width:992px) {
+  .section-service {
+    padding: 80px 8vw 150px;
+  }
+  .section-service h3 {
+    letter-spacing: 0.4rem;
+  }
+  .celebration__wrapper {
+    flex-direction: row;
+    width: min(100%, 1040px);
+    align-items: flex-start;
+    margin: 0 auto 60px;
+  }
+  .celebration__wrapper img {
+    width: min(50%, 380px);
+    margin-bottom: 0;
+  }
+  .ticket__text {
+    width: min(60%, 1040px);
+    margin: 0px auto 0;
+  }
+}
+/*section service---*/

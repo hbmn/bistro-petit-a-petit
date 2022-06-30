@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>BISTRO PETIT A PETIT</title>
+<link href="images/favicon.png" rel="icon" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="images/favicon.png">
+<meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
+<meta name="format-detection" content="telephone=no">   
+<link rel="stylesheet" href="assets/reset.css">
+<link rel="stylesheet" href="assets/common.css">
+<link rel="stylesheet" href="assets/reserve.css">
+</head>
+<body>
+<!--header-->
+<header class="header">
+  <div class="header__inner"> <a class="header-logo" href="index.html"><img src="images/national_flag.png" alt="フランス国旗">
+    <h1>ビストロ プティタプティ</h1>
+    </a>
+    <div class="open-btn-area"> <span class="open-btn first"></span> <span class="open-btn second"></span> <span class="open-btn therd"></span> </div>
+    <nav class="gnav nav-open">
+      <ul>
+        <li><a href="index.html"><span class="gnav-english">TOP</span><span class="gnav-ja">トップ</span></a></li>
+        <li><a class="news"  href="index.html#news"><span class="gnav-english">NEWS</span><span class="gnav-ja">お知らせ</span></a></li>
+        <li><a href="menu.html"><span class="gnav-english">MENU</span><span class="gnav-ja">メニュー</span></a></li>
+        <li><a href="information.html"><span class="gnav-english">INFORMATION </span><span class="gnav-ja">店舗情報</span></a></li>
+        <li><a href="reserve.html"><span class="gnav-english">RESERVE </span><span class="gnav-ja">ご予約</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!--header-->
+<main class="top_margin">
+  <h2 class="title">RESERVE <br class="none">
+    <span>ご予約</span></h2>
+<!--notes-->
+  <section class="section-notes">
+    <div class="section-notes__wrapper">
+      <h3>ご来店時の注意事項</h3>
+      <div class="section-notes__inner">
+        <div>
+          <h4>お時間に限りのある方（1時間半以内）は必ず予めお知らせください。</h4>
+          <p>コースやお料理をご相談のうえ、できるかぎり優先してお出しします。
+             途中からでは無理な場合があるので、ご予約時・ご入店時にお知らせください。</p>
+        </div>
+        <div>
+          <h4>遅れる場合には必ずご予約時刻前にご連絡ください。</h4>
+          <p> 席数が少ないため、ご連絡なしでお見えにならない場合はお席の場所（カウンターへ）の変更、 
+              及び、15分経過でキャンセルさせて頂くことがあります。</p>
+        </div>
+        <div>
+          <h4>お子様のご来店に関して。</h4>
+          <p> 当店では、ご来店いただいた全てのお客様のお食事の時間を大切にしたいという考えから、
+              お子様のご来店に制限を設けさせて頂いおります。詳しくは<a href="news_child.html">こちら</a>をご覧ください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--notes-->
+<!--form-->
+  <section class="section-form">
+    <div class="section-form__wrapper">
+      <h3>ご予約フォーム <br>
+        <span>お問い合わせ、<br class="none">
+        その他のご連絡もこちらからどうぞ。</span></h3>
+<!--form area-->
+      <div class="form_area">
+        <div class="label_flex">
+          <label for="name" >お名前</label>
+          <input id="name" type="text">
+        </div>
+        <div class="label_flex">
+          <label for="name_kana">フリガナ</label>
+          <input id="name_kana" type="text">
+        </div>
+        <div class="label_flex">
+          <label for="email">メールアドレス</label>
+          <input id="email" type="email">
+        </div>
+        <div class="label_flex">
+          <label for="tel">電話番号</label>
+          <input id="tel" type="tel">
+        </div>
+        <div class="label_flex">
+          <label for="date" id="date-time">ご来店日時</label>
+          <div>
+            <select name="date" id="date" aria-labelledby="date-time">
+              <option value="">月 / 日</option>
+              <option value="">7月1日(金)</option>
+              <option value="">7月2日(土)</option>
+              <option value="">7月3日(日)</option>
+              <option value="">7月5日(火)</option>
+            </select>
+            <select name="time" id="time" aria-labelledby="date-time">
+              <option value="">18:00~</option>
+              <option value="">19:00~</option>
+              <option value="">20:00~</option>
+              <option value="">21:00~</option>
+            </select>
+          </div>
+        </div>
+        <div class="label_flex">
+          <label for="nop">ご予約人数</label>
+          <div>
+            <select name="nop" id="nop">
+              <option value="">1名</option>
+              <option value="">2名</option>
+              <option value="">3名</option>
+              <option value="">4名</option>
+              <option value="">5名</option>
+              <option value="">6名</option>
+              <option value="">7名</option>
+              <option value="">8名</option>
+              <option value="">貸切予約希望</option>
+            </select>
+          </div>
+        </div>
+        <div class="label_flex">
+          <label for="text">お問い合わせ</label>
+          <textarea name="text" id="text"></textarea>
+        </div>
+      </div>
+<!--form area-->
+      <div class="section-form__into-message">
+        <p>メールでのご予約は３営業日（店休日を抜かして３日）前の17時までの受付です。<br>
+          それ以降ですと、メール確認ができない場合もありますのでご留意下さい。<br>
+          確認後の返信を差し上げた時点でのご予約完了となります。</p>
+        <p>お客様からのメール受信時に自動応答メールをお送りしております。<br>
+          自動応答メールがしばらくしても届かない場合、迷惑メールとされている恐れがありますのでご確認をお願い致します。<br>
+          お客様がメール送信されてから2営業日後の19時迄に返信がなければ、お手数ですがお電話でご確認下さい。<br>
+        </p>
+        電話番号<a class="tel" href="tel:03-6303-7159">03-6303-7159</a>
+      </div>
+      <input class="submit" type="submit" value="確認">
+    </div>
+    <div class=" section-form__sidebar">
+      <p>メールご予約を頂いたお客様から、返信前にお電話を頂いてしまうことがあります。<br>
+        営業日の主に19時頃までに返信致しておりますが、ひとり営業のため常時返信できる環境ではございませんので、
+        状況によっては翌々日となることもございます。<br>
+        （それを踏まえての３日前までのメール受付けです。）</p>
+      <p>また、月曜ほか店休日、及び日曜日15時以降のご連絡には基本的に翌営業日の19時頃までにご連絡しておりますので、今しばらくお待ちくださいませ。</p>
+    </div>
+  </section>
+<!--form--> 
+</main>
+<!--footer-->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="shopinfo-name"> 
+        <p>BISTRO <br class="none">PETIT A PETIT <br>
+      <span>ビストロ　プティタプティ</span></p></div>
+    <address class="shopinfo-address">
+    東京都品川区大井1-43-5　<br>
+    ソレイユ大井1F <br>
+    03-6303-7159（TEL & FAX) 
+    </address>
+    <div class="sns"> <a href="https://twitter.com/pt_a_pt?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Apt_a_pt%7Ctwgr%5Ee30%3D&ref_url=file%3A%2F%2F%2FUsers%2Fmana%2FDesktop%2F%25E5%258D%2592%25E6%25A5%25AD%25E5%2588%25B6%25E4%25BD%259C%2FBISTRO%2520PETIT%2520A%2520PETIT%2Findex.html"><img src="images/twitter.png" alt="twitter"></a> <a href="https://www.facebook.com/ooiptapt/"><img src="images/facebook.png" alt="facebook"></a> <a href="https://ameblo.jp/pt-a-pt/entry-12746578525.html"><img src="images/blog.png" alt="amebablog"></a>
+    </div>
+    <small>&copy;BISTRO　PETIT A PETIT All Right Reserved.</small>  
+  </div>
+</footer>
+<!--footer--> 
+<a href="#">
+<div class="scroll-top"></div>
+</a> 
+<!--ここからjQuery--> 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+<script>
+    //ハンバーガーbtn----------------
+
+        $(".open-btn-area").click(function(){
+            $(".gnav,.header-logo,.open-btn").toggleClass("active");
+            });
+    
+    //ページ内linkに飛んだ際 gnav閉じる、btnとlogo戻す
+        $(".news").click(function(){
+           $(".gnav,.header-logo,.open-btn").removeClass("active");
+            });
+
+    //ハンバーガーbtn----------------
+
+    
+    
+    
+    
+    
+    //-scroll top btn--------------
+   
+        var width = $(window).innerWidth();
+    
+    
+        if(width < 992){
+        
+        let btn = $(".scroll-top");
+        btn.hide();
+        
+        $(window).scroll(function(){
+            console.log ($(this).scrollTop());
+                if($(this).scrollTop()>1500){
+                    btn.fadeIn();
+                }else{btn.fadeOut();
+                }
+            });
+        
+        
+        btn.click(function(event){event.preventDefault();
+            $("body,html").animate({
+             scrollTop:0},500);
+                });
+            };
+    
+    //-scroll top btn-----------------------  
+       
+    
+
+
+    
+    //header スクロールしたらbg color----------
+                    
+        $(window).scroll(function(){
+            console.log ($(this).scrollTop());
+                if($(this).scrollTop()>100){
+                    $(".header").addClass("color");
+                }else{
+                   $(".header").removeClass("color");
+                    };   
+            });
+
+</script>
+</body>
+</html>

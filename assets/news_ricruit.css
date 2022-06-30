@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+.top_margin {
+  margin-bottom: 80px;
+}
+.news-ricruit__intro {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 50px;
+}
+.news-ricruit__intro img {
+  width: min(100%, 400px);
+}
+.news-ricruit__intro__message {
+  padding: 0 8vw;
+  text-align: left;
+}
+.news-ricruit__intro__message p {
+  margin-bottom: 20px;
+}
+.news-ricruit__intro__message a {
+  color: #333;
+}
+.news-ricruit__intro__message h3 {
+  font-size: clamp(2.0rem, 6.4vw, 3.2rem); /* 24 / 375 * 100 = 6.4vw */
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+@media(min-width:992px) {
+  .news-ricruit__intro {
+    flex-direction: row;
+    justify-content: space-between;
+    width: min(100%, 940px);
+    margin: 0 auto 60px;
+  }
+  .news-ricruit__intro img {
+    width: 45%;
+  }
+  .news-ricruit__intro__message {
+    padding: 30px;
+  }
+}
+.news-ricruit__description {
+  padding: 0 8vw;
+  text-align: left;
+}
+.news-ricruit__employee{
+    margin-bottom:120px;
+}
+
+.detail{
+  margin: 0 auto ;
+  width: min(100%, 940px);
+}
+.news-ricruit__employee h4, .news-ricruit__part h4 {
+  font-size: clamp(2.0rem, 5.8vw, 2.4rem);
+  margin:0 auto 30px;
+  padding: 0 0 10px 2.666vw; /* 10 / 367 * 100 = 2.666vw */
+  border-bottom: solid 1px #333;
+  color: #5a1609;
+  width:min(100%,940px);
+  box-sizing: border-box;
+}
+.news-ricruit__description h5 {
+  font-weight: 600;
+}
+.news-ricruit__description p {
+  margin-bottom: 30px;
+}
